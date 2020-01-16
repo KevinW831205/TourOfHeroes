@@ -32,6 +32,11 @@ export class HerosComponent implements OnInit {
         .subscribe(heroes => this.heroes = heroes);
   }
 
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+  }
+
   // onSelect(hero: Hero): void {
   //   this.selectedHero = hero;
   //   console.log(hero);
