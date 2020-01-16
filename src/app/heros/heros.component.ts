@@ -15,7 +15,7 @@ export class HerosComponent implements OnInit {
   //   name: "WindStorm"
   // };
 
-  herooes = HEROES;
+  heroes = HEROES;
 
   constructor() { }
 
