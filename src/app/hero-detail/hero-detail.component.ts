@@ -3,7 +3,7 @@ import { Hero } from '../Classes/Hero';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { HeroService }  from '../service/hero.service';
+import { HeroService } from '../service/hero.service';
 
 @Component({
   selector: 'app-hero-detail',
@@ -30,6 +30,10 @@ export class HeroDetailComponent implements OnInit {
     console.log(id);
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }
